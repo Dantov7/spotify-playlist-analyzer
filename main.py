@@ -25,7 +25,6 @@ user_stats = User(base_url, headers)
 
 
 
-
 aa = user_stats.get_user_data()
 bb = user_stats.top10_artist()
 cc = user_stats.top_5_genres()
