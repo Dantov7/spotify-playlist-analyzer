@@ -20,7 +20,6 @@ class Playlist :
             }   
         
         self.__response_audio_features = requests.get(base_url+'audio-features', headers=headers, params=self.__params_ids)
-
         
 
     def tracks_id_extraction(self):
@@ -122,11 +121,18 @@ class Playlist :
             suma += i 
         average = suma/len(list)
         return average
+    
+    def get_playlist_name(self):
+        return self.__response_playlist.json()["name"]
+    
+    def get_playlist_description(self):
+        return self.__response_playlist.json()["description"]
+
+    """Función para obtener el response original para troubleshooting"""
+    
+    def get_churro(self):
+        return self.__response_playlist
 
 
 
-
-'''
-
-'''
 

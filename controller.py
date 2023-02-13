@@ -14,6 +14,8 @@ class Controller:
         self.__user_data = None
         self.__playlist_id = None
         self.__playlist_features = None
+        self.__playlist_name = None
+        self.__playlist_description = None
 
     def __connect_signals(self):
         self.__view.login_button.clicked.connect(self.login)
@@ -40,11 +42,23 @@ class Controller:
 
     def change_favorites(self):
         """Creo una lista con las variables.setText de la GUI para iterar"""
-        artists_dict = [self.__view.artists_1.setText, self.__view.artists_2.setText, self.__view.artists_3.setText, self.__view.artists_4.setText, self.__view.artists_5.setText]
+        artists_dict = [self.__view.artists_1.setText,
+                        self.__view.artists_2.setText, 
+                        self.__view.artists_3.setText, 
+                        self.__view.artists_4.setText, 
+                        self.__view.artists_5.setText]
 
-        songs_dict = [self.__view.songs_1.setText, self.__view.songs_2.setText, self.__view.songs_3.setText, self.__view.songs_4.setText, self.__view.songs_5.setText]
+        songs_dict = [self.__view.songs_1.setText,
+                      self.__view.songs_2.setText, 
+                      self.__view.songs_3.setText, 
+                      self.__view.songs_4.setText, 
+                      self.__view.songs_5.setText]
 
-        genres_dict = [self.__view.genre_1.setText, self.__view.genre_2.setText, self.__view.genre_3.setText, self.__view.genre_4.setText, self.__view.genre_5.setText]
+        genres_dict = [self.__view.genre_1.setText, 
+                       self.__view.genre_2.setText, 
+                       self.__view.genre_3.setText, 
+                       self.__view.genre_4.setText, 
+                       self.__view.genre_5.setText]
 
         for i in range(5):
             artists_dict[i](self.__top_10_artists[i])
@@ -63,9 +77,16 @@ class Controller:
 
     def analyze_playlist(self):
         self.__playlist_features = self.__model.playlist_analysis(self.__playlist_id)
+        self.__playlist_name = self.__model.get_playlist_name()
+        self.__playlist_description = self.__model.get_playlist_description()
         print (self.__playlist_features)
+        print(self.__playlist_name)
+        print(self.__playlist_description)
     
     def change_playlist_features(self):
+        self.__view.playlist_name.setText(self.__playlist_name)
+        #self.__view.playlist_description.setText()
+
         """Creo diccionarios con las variables.setText de la GUI para iterar"""
         features_btn_list = [self.__view.tempo_value.setText,
                         self.__view.acousticness_value.setText, 

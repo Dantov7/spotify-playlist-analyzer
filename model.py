@@ -13,6 +13,8 @@ class Model():
         self.__headers = None
         self.__playlist_id = None
         self.__feature_tracks = {}
+        self.__playlist_name = None
+        self.__playlist_description = None
         
 
     def login(self):
@@ -45,6 +47,8 @@ class Model():
         playlist = Playlist(self.__base_url, self.__headers,  playlist_id)
         self.__feature_tracks = playlist.get_features()
         playlist.get_cover_image()
+        self.__playlist_name = playlist.get_playlist_name()
+        self.__playlist_description = playlist.get_playlist_description()
         return self.__feature_tracks
 
 
@@ -61,5 +65,10 @@ class Model():
     def get_top_10_tracks(self):
         return self.__top_10_tracks
 
+    def get_playlist_name(self):
+        return self.__playlist_name
+
+    def get_playlist_description(self):
+        return self.__playlist_description
 
 
