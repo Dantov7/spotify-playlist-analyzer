@@ -10,6 +10,6 @@ Currently only CLI version, GUI version still in beta!
 
 ##Use
 Actualmente hay dos formas de obtener información:
-- main.py obtiene los datos mediante línea de comandos, la playlist se tiene que introducir como string en la variable playlist_id
-- main_ui.py lanza la interfaz gráfica, desde donde puedes iniciar sesión en Spotify e ingresar URLs de las playlist de las que se desea obtener información.
+- `main.py` obtiene los datos mediante línea de comandos, la playlist se tiene que introducir como string en la variable playlist_id
+- `main_ui.py` lanza la interfaz gráfica, desde donde puedes iniciar sesión en Spotify e ingresar URLs de las playlist de las que se desea obtener información.
 
