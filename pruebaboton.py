@@ -1,29 +1,14 @@
-import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLineEdit, QPushButton, QVBoxLayout, QWidget
+from PyQt6 import QtWidgets, QtGui
 
+app = QtWidgets.QApplication([])
 
+label = QtWidgets.QLabel()
+label.setScaledContents(True)
+label.setFixedSize(350, 350)
 
-app = QApplication(sys.argv)
-window = QMainWindow()
+pixmap = QtGui.QPixmap("cover.jpg")
+label.setPixmap(pixmap)
 
-widget = QWidget()
-layout = QVBoxLayout()
+label.show()
 
-line_edit = QLineEdit()
-layout.addWidget(line_edit)
-
-button = QPushButton("Guardar texto")
-button.clicked.connect(handle_button_click)
-layout.addWidget(button)
-
-widget.setLayout(layout)
-window.setCentralWidget(widget)
-window.show()
-
-sys.exit(app.exec())
-
-def handle_button_click():
-    text = line_edit.text()
-    # Hacer algo con el texto aquí
-    print (text)
-    print("este es el texto: " + text)
+app.exec()
