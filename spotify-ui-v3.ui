@@ -856,7 +856,6 @@
           </property>
           <property name="font">
            <font>
-            <family>Arial Rounded MT Bold</family>
             <pointsize>14</pointsize>
            </font>
           </property>
@@ -876,9 +875,7 @@
              <widget class="QLabel" name="bienvenida_user">
               <property name="font">
                <font>
-                <family>Arial</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -894,9 +891,7 @@
              <widget class="QLabel" name="seguidores">
               <property name="font">
                <font>
-                <family>Arial</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -914,9 +909,7 @@
            <widget class="QLabel" name="login_exitoso">
             <property name="font">
              <font>
-              <family>Arial Black</family>
               <pointsize>14</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -924,7 +917,21 @@
              <bool>false</bool>
             </property>
             <property name="text">
-             <string>Felicidades, te has logueado con éxito!</string>
+             <string>login_message</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="login_button">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>11</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Login</string>
             </property>
            </widget>
           </item>
@@ -938,9 +945,7 @@
          <widget class="QLabel" name="fav_songs_label">
           <property name="font">
            <font>
-            <family>Arial</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -959,9 +964,7 @@
          <widget class="QLabel" name="fav_artists_label">
           <property name="font">
            <font>
-            <family>Arial</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -980,9 +983,7 @@
          <widget class="QLabel" name="fav_genre_label">
           <property name="font">
            <font>
-            <family>Arial</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -1000,9 +1001,7 @@
         <item row="1" column="0">
          <widget class="QLabel" name="artists_1">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1015,9 +1014,7 @@
         <item row="1" column="1">
          <widget class="QLabel" name="songs_1">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1030,9 +1027,7 @@
         <item row="1" column="2">
          <widget class="QLabel" name="genre_1">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1045,9 +1040,7 @@
         <item row="2" column="0">
          <widget class="QLabel" name="artists_2">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1060,9 +1053,7 @@
         <item row="2" column="2">
          <widget class="QLabel" name="genre_2">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1075,9 +1066,7 @@
         <item row="3" column="1">
          <widget class="QLabel" name="songs_3">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1090,9 +1079,7 @@
         <item row="3" column="0">
          <widget class="QLabel" name="artists_3">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1105,9 +1092,7 @@
         <item row="4" column="0">
          <widget class="QLabel" name="artists_4">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1120,9 +1105,7 @@
         <item row="2" column="1">
          <widget class="QLabel" name="songs_2">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1135,9 +1118,7 @@
         <item row="4" column="1">
          <widget class="QLabel" name="songs_4">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1150,9 +1131,7 @@
         <item row="5" column="1">
          <widget class="QLabel" name="songs_5">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1165,9 +1144,7 @@
         <item row="5" column="0">
          <widget class="QLabel" name="artists_5">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1180,9 +1157,7 @@
         <item row="3" column="2">
          <widget class="QLabel" name="genre_3">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1195,9 +1170,7 @@
         <item row="4" column="2">
          <widget class="QLabel" name="genre_4">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1210,9 +1183,7 @@
         <item row="5" column="2">
          <widget class="QLabel" name="genre_5">
           <property name="font">
-           <font>
-            <family>Arial</family>
-           </font>
+           <font/>
           </property>
           <property name="text">
            <string>TextLabel</string>
@@ -1654,7 +1625,6 @@
         </property>
         <property name="font">
          <font>
-          <family>Arial Rounded MT Bold</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -2087,9 +2057,7 @@
           </property>
           <property name="font">
            <font>
-            <family>Arial Black</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -2106,6 +2074,13 @@
         </item>
         <item row="1" column="1">
          <widget class="QPushButton" name="analyze_button">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>11</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="text">
            <string>Analizar</string>
           </property>
@@ -3001,9 +2976,7 @@
           </property>
           <property name="font">
            <font>
-            <family>Cooper Black</family>
             <pointsize>24</pointsize>
-            <weight>50</weight>
             <bold>false</bold>
            </font>
           </property>
@@ -3021,9 +2994,7 @@
            <widget class="QLabel" name="followers_label">
             <property name="font">
              <font>
-              <family>Arial</family>
               <pointsize>11</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -3036,8 +3007,6 @@
            <widget class="QLabel" name="followers_number">
             <property name="font">
              <font>
-              <family>Arial</family>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -3076,9 +3045,7 @@
          <widget class="QLabel" name="tempo_label">
           <property name="font">
            <font>
-            <family>Arial</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3091,8 +3058,6 @@
          <widget class="QLabel" name="tempo_value">
           <property name="font">
            <font>
-            <family>Arial</family>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3105,9 +3070,7 @@
          <widget class="QLabel" name="acousticness_label">
           <property name="font">
            <font>
-            <family>Arial</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3120,8 +3083,6 @@
          <widget class="QLabel" name="acousticness_value">
           <property name="font">
            <font>
-            <family>Arial</family>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3134,9 +3095,7 @@
          <widget class="QLabel" name="danceability_label">
           <property name="font">
            <font>
-            <family>Arial</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3149,8 +3108,6 @@
          <widget class="QLabel" name="danceability_value">
           <property name="font">
            <font>
-            <family>Arial</family>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3163,9 +3120,7 @@
          <widget class="QLabel" name="energy_label">
           <property name="font">
            <font>
-            <family>Arial</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3178,8 +3133,6 @@
          <widget class="QLabel" name="energy_value">
           <property name="font">
            <font>
-            <family>Arial</family>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3196,9 +3149,7 @@
          <widget class="QLabel" name="instrumentalness_label">
           <property name="font">
            <font>
-            <family>Arial</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3211,8 +3162,6 @@
          <widget class="QLabel" name="instrumentalness_value">
           <property name="font">
            <font>
-            <family>Arial</family>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3225,9 +3174,7 @@
          <widget class="QLabel" name="liveness_label">
           <property name="font">
            <font>
-            <family>Arial</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3240,8 +3187,6 @@
          <widget class="QLabel" name="liveness_value">
           <property name="font">
            <font>
-            <family>Arial</family>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3254,9 +3199,7 @@
          <widget class="QLabel" name="loudness_label">
           <property name="font">
            <font>
-            <family>Arial</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3269,8 +3212,6 @@
          <widget class="QLabel" name="loudness_value">
           <property name="font">
            <font>
-            <family>Arial</family>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3283,9 +3224,7 @@
          <widget class="QLabel" name="valence_label">
           <property name="font">
            <font>
-            <family>Arial</family>
             <pointsize>11</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3298,8 +3237,6 @@
          <widget class="QLabel" name="valence_value">
           <property name="font">
            <font>
-            <family>Arial</family>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -3320,7 +3257,7 @@
      <x>0</x>
      <y>0</y>
      <width>838</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

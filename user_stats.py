@@ -24,7 +24,8 @@ class User:
         username = response.json()['display_name']
         user_followers = response.json()['followers']['total']
         user_data = [username, user_followers]
-        print (f'Bienvenido: { username }, actualmente tiene {user_followers} seguidores')
+        #user_data_str = (f'Bienvenido: { username }, actualmente tiene {user_followers} seguidores')
+        #return user_data, user_data_str
         return user_data
 
 

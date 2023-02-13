@@ -1,54 +1,43 @@
 import sys
-
-from PyQt6.QtWidgets import QApplication, QDialog, QMainWindow, QPushButton
-
-from spotify_ui_v1 import Ui_MainWindow
-
-# Creamos primera clase con un solo widget presionable para el login
-class Window(QMainWindow):
-    """Main window."""
-    def __init__(self, parent=None):
-        """Initializer."""
-        super().__init__(parent)
-        # Use a QPushButton for the central widget
-        self.__centralWidget = QPushButton("Inicia sesión en Spotify para empezar")
-
-        # Connect the .clicked() signal with the .LoginBtnClicked() slot
-        self.__centralWidget.clicked.connect(self.LoginBtnClicked)
-
-        # Acá define como widget central de la instancia QmainWindow el self.__centralWidget
-        self.setCentralWidget(self.__centralWidget)
+#import main
+from controller import Controller
+from PyQt6 import QtWidgets
+from spotify_ui_v3 import Ui_MainWindow
+#from main import playlist, user_stats
+#from user_stats import User
+from view import MainWindow
+from model import Model
 
 
-    # Create a slot for launching the employee dialog
-    def LoginBtnClicked(self):
-        """Launch the employee dialog.""" # Instacia la clase y arranca la aplicacion con el exec
-        playlist_analyzer_gui = Playlist_Analyzer_GUI(self)
-        #playlist_analyzer_gui.exec()
+def main():
+    app = QtWidgets.QApplication([])
     
+    view = MainWindow()
+    view.show()
 
+    model = Model()
 
-# Creamos la clase de la interfaz graáfica del analizador
-class Playlist_Analyzer_GUI(QMainWindow):
-    """playlist UI dialog."""
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        # Creamos una instanciade la gui llamando la clase Ui_MainWindow del spotify_ui_py
-        self.__ui = Ui_MainWindow()
-        # Run the .setupUi() method to show the GUI spotify_ui_py
-        self.__ui.setupUi(self)
-        self.exec()
+    controller = Controller(view, model)
 
-
-# Main Loop de la aplicación: 
-
-if __name__ == "__main__":
-    # Create the application
-    app = QApplication(sys.argv)
-    # Create and show the application's main window
-    win = Window()
-    win.show()
-    # Run the application's main loop
     sys.exit(app.exec())
 
 
+if __name__ == '__main__':
+    main()
+
+
+
+"""
+# Esta clase en realidad pertenece al view
+
+class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        
+        #Intento cambiar le nombre de un label de la aplicacion con .setText
+        #self.login_exitoso.setText("makanaki gaaaa")
+
+#user_stats.get_user_data()
+
+"""
