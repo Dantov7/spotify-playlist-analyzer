@@ -1,6 +1,3 @@
-import requests
-import json
-
 from collections import Counter
 from user_stats import User
 
@@ -85,7 +82,7 @@ class Controller:
     
     def change_playlist_features(self):
         self.__view.playlist_name.setText(self.__playlist_name)
-        #self.__view.playlist_description.setText()
+        self.__view.followers_label.setText(self.__playlist_description)
 
         """Creo diccionarios con las variables.setText de la GUI para iterar"""
         features_btn_list = [self.__view.tempo_value.setText,
@@ -112,8 +109,3 @@ class Controller:
 
     def change_cover(self):
         self.__view.cover_img("cover.jpg")
-            
-            
-
-
-

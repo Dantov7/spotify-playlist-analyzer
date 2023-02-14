@@ -6,7 +6,7 @@ import json
 
 base_url = 'https://api.spotify.com/v1/'
 auth = Auth()
-auth.generate_token()    # use it only for the first time
+#auth.generate_token()    # use it only for the first time
 token = auth.get_token()
 
 headers = {
@@ -22,7 +22,7 @@ playlist_id = analyzed_playlist.strip('https://open.spotify.com/playlist/')
 playlist = Playlist(base_url, headers, playlist_id)
 user_stats = User(base_url, headers)
 
-
+"""
 user_data = user_stats.get_user_data()
 bb = user_stats.top10_artist()
 cc = user_stats.top_5_genres()
@@ -34,16 +34,14 @@ ll = playlist.get_playlist_description()
 
 print (kk)
 print(ll)
-
+"""
 
 #Funcion para guardar en json
 def save_json(data):
     data = json.loads(data.text)
     with open ("churros.json","w") as file:
         json.dump(data, file)
-
 save_json(aa)
-
 
 
 def save(*items):

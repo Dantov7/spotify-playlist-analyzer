@@ -1,17 +1,13 @@
-from collections import Counter
 from playlist import Playlist
 from auth import Auth
 from user_stats import User
-from controller import Controller
 
 
 class Model():
     def __init__(self):
         self.__user_data = None
         self.__base_url = 'https://api.spotify.com/v1/'
-        self.__token = None
         self.__headers = None
-        self.__playlist_id = None
         self.__feature_tracks = {}
         self.__playlist_name = None
         self.__playlist_description = None
@@ -33,16 +29,10 @@ class Model():
         self.__top_10_artists = user_stats.top10_artist()
         self.__top_5_genres = user_stats.top_5_genres()
         self.__top_10_tracks = user_stats.top_10_tracks()
-        
         return self.__user_data
 
 
-
     def playlist_analysis(self, playlist_id):
-        
-        # Ya no se usan estos, vienen del controlador
-        #analyzed_playlist = 'https://open.spotify.com/playlist/37i9dQZF1DWWGFQLoP9qlv'
-        #playlist_id = analyzed_playlist.strip('https://open.spotify.com/playlist/')
         
         playlist = Playlist(self.__base_url, self.__headers,  playlist_id)
         self.__feature_tracks = playlist.get_features()

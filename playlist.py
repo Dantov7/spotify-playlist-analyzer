@@ -36,6 +36,7 @@ class Playlist :
         with open ('cover.jpg', 'wb') as file:
             file.write(response_image.content)
 
+
     def get_followers(self):
         followers = self.__response_playlist.json()["followers"]["total"]
         return followers
@@ -57,7 +58,7 @@ class Playlist :
             artists.append(artist)
         return artists
 
-    # Se ingresa un string con la lista de ids, documentado en la API. Robado de daniela
+    # Se ingresa un string con la lista de ids, documentado en la API.
     def get_features (self):
         
         features = ["tempo","acousticness","danceability","energy","instrumentalness","liveness","loudness","valence"]
@@ -113,25 +114,22 @@ class Playlist :
         return features_tracks
 
 
+    """Obtenemos el promedio de los valores entregados"""
     def __get_average(self,list):
-        
         suma = 0
         for i in list:
             suma += i 
         average = round(suma/len(list), 2)
         return average
     
+    """Funciones para pasar datos"""
     def get_playlist_name(self):
         return self.__response_playlist.json()["name"]
     
     def get_playlist_description(self):
         return self.__response_playlist.json()["description"]
 
-    """Función para obtener el response original para troubleshooting"""
-    
+
+    """Función para obtener el response original para troubleshooting"""    
     def get_churro(self):
         return self.__response_playlist
-
-
-
-
