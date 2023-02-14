@@ -6,8 +6,7 @@ class Playlist :
 
         self.__playlist_endpoint = 'playlists/'+playlist_id
         self.__response_playlist = requests.get(base_url+self.__playlist_endpoint, headers=headers)
-        self.__number_tracks = len(self.__response_playlist.json()['tracks']['items'])
-        self.__total_tracks = len(self.__response_playlist.json()["tracks"]["items"])
+        self.__total_tracks = len(self.__response_playlist.json()['tracks']['items'])
         
         self.__params_items  = {
             'limit' : self.__total_tracks
@@ -28,7 +27,7 @@ class Playlist :
             track_id = self.__response_playlist_items.json()['items'][i]['track']['id']
             tracks_id.append(track_id)
             tracks_id_string = ",".join(tracks_id)
-        # regreso una lista de ids y un strin con todos los ids separados por coma
+        # regreso una lista de ids y un string con todos los ids separados por coma
         return tracks_id, tracks_id_string
 
     
@@ -44,7 +43,7 @@ class Playlist :
 
     def tracks_extraction(self):
         tracks_list = []
-        for i in range(self.__number_tracks):
+        for i in range(self.__total_tracks):
             track = self.__response_playlist_items.json()['items'][i]['track']['name']
             tracks_list.append(track)
         #tracks_list =  (f'{i+1}- {track}, Artista: {artist}')
@@ -53,7 +52,7 @@ class Playlist :
 
     def tracks_artists_extraction(self):
         artists = []
-        for i in range(self.__number_tracks):
+        for i in range(self.__total_tracks):
             artist = self.__response_playlist_items.json()['items'][i]['track']['artists'][0]['name']
             artists.append(artist)
         return artists
@@ -71,7 +70,7 @@ class Playlist :
         list_loudness = []
         list_valence = []
 
-        for i in range(self.__number_tracks):
+        for i in range(self.__total_tracks):
             for key in features:
                 data = self.__response_audio_features.json()["audio_features"][i][key]
                 
@@ -110,7 +109,7 @@ class Playlist :
             "loudness": self.__get_average(list_loudness),
             "valence": self.__get_average(list_valence)
         }
-
+        print (features_tracks)
         return features_tracks
 
 
@@ -119,7 +118,7 @@ class Playlist :
         suma = 0
         for i in list:
             suma += i 
-        average = suma/len(list)
+        average = round(suma/len(list), 2)
         return average
     
     def get_playlist_name(self):
